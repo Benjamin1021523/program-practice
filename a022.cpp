@@ -1,30 +1,18 @@
+//advance a022
 #include<iostream>
 using namespace std;
-
 int main(){
-    int a, b;
-    string input;
-    while(cin >> input){
-        bool det;
-        b = input.size() - 1;
-        a = 0;
-        for(int i = 0;i <= 500;i++){
-            if(input[a] == input[b]){
-                det = true;
-            }
-            else{
-                det = false;
-                break;
-            }
-            a++;
-            b--;
-            if(a >= b){
-                break;
-            }
+    string a, b;
+    while(cin >> a){
+        b = "";
+        for(int i = a.size() - 1;i >= 0;i--){
+            b += a[i];
         }
-        if(det)
+        if(a == b){
             cout << "yes" << endl;
-        else
+        }
+        else{
             cout << "no" << endl;
+        }
     }
 }
