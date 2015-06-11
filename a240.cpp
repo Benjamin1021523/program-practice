@@ -4,7 +4,7 @@ int main(){
     long int a;
     int x, output, total, round, b;
     cin >> round;
-    while(round > 0){
+    while(round--){
         cin >> a;
         x = 1;
         b = a / 16;
@@ -26,6 +26,5 @@ int main(){
         }
         total += (b * 72);
         cout << output << " " << total << endl;
-        round--;
     }
 }
