@@ -1,19 +1,17 @@
 #include<iostream>
 using namespace std;
-long int f91(long int a);
 
 int main(){
-    long int a;
+    int a, b;
     while(cin >> a){
-        cout << f91(a) << endl;
-    }
-}
-
-long int f91(long int a){
-    if(a >= 101){
-        return a - 10;
-    }
-    else{
-        return f91(f91(a + 11));
+        if(a == 0)
+            break;
+        if(a <= 100){
+            b = 91;
+        }
+        else if(a >= 101){
+            b = a - 10;
+        }
+        cout << "f91(" << a << ") = " << b << endl;
     }
 }
